@@ -1,0 +1,25 @@
+{
+  "name": "CardEvent",
+  "type": "object",
+  "properties": {
+    "card_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "visit",
+        "whatsapp",
+        "call",
+        "vcard",
+        "email",
+        "directions",
+        "share"
+      ]
+    }
+  },
+  "required": [
+    "card_id",
+    "event_type"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Staff",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "password_hash": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "owner",
+        "admin",
+        "staff"
+      ],
+      "default": "staff"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "manage_clients": {
+          "type": "boolean"
+        },
+        "manage_staff": {
+          "type": "boolean"
+        },
+        "manage_settings": {
+          "type": "boolean"
+        },
+        "view_stats": {
+          "type": "boolean"
+        }
+      }
+    },
+    "session_token": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "username",
+    "password_hash",
+    "role"
+  ],
+  "rls": {
+    "read": false,
+    "create": false,
+    "update": false,
+    "delete": false
+  }
+}

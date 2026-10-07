@@ -1,0 +1,138 @@
+{
+  "name": "Client",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "template": {
+      "type": "string",
+      "enum": [
+        "general",
+        "lawyer",
+        "real_estate",
+        "grocery",
+        "dmr",
+        "custom"
+      ],
+      "default": "general"
+    },
+    "custom_template_id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "suspended",
+        "expired"
+      ],
+      "default": "active"
+    },
+    "renewal_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "auto_suspend": {
+      "type": "boolean",
+      "default": false
+    },
+    "profile_image": {
+      "type": "string"
+    },
+    "job_title": {
+      "type": "string"
+    },
+    "job_title_en": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "address_en": {
+      "type": "string"
+    },
+    "map_url": {
+      "type": "string"
+    },
+    "social": {
+      "type": "object",
+      "properties": {
+        "facebook": {
+          "type": "string"
+        },
+        "instagram": {
+          "type": "string"
+        },
+        "twitter": {
+          "type": "string"
+        },
+        "linkedin": {
+          "type": "string"
+        },
+        "tiktok": {
+          "type": "string"
+        },
+        "snapchat": {
+          "type": "string"
+        },
+        "youtube": {
+          "type": "string"
+        }
+      }
+    },
+    "bio": {
+      "type": "string"
+    },
+    "bio_en": {
+      "type": "string"
+    },
+    "primary_color": {
+      "type": "string"
+    },
+    "template_data": {
+      "type": "object"
+    },
+    "language_toggle": {
+      "type": "boolean",
+      "default": false
+    },
+    "default_language": {
+      "type": "string",
+      "enum": [
+        "ar",
+        "en"
+      ],
+      "default": "ar"
+    }
+  },
+  "required": [
+    "name",
+    "template",
+    "slug"
+  ],
+  "rls": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  }
+}

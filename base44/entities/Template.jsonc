@@ -1,0 +1,29 @@
+{
+  "name": "Template",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "object"
+    },
+    "buttons": {
+      "type": "array"
+    },
+    "is_builtin": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "layout"
+  ],
+  "rls": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  }
+}
